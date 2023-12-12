@@ -1,0 +1,164 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <br> <br>
+
+    <h3 class="container center"> Please fill the following data correctly. </h3>
+    <br> <br>
+     <!--  form -->
+
+
+  <div style="width: 50%;" class="row ">
+    <form class="col s12" method="POST"> 
+
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.age }}
+          <label for="a1">Age</label>
+          <span class="helper-text">Enter your current age as of the current date when filling out an age field.</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.sex }}
+          <label for="a2">Sex</label>
+          <span class="helper-text">Enter your sex here.(0-Male,1-Female).</span>
+        </div>
+      </div>
+
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.cp }}
+          <label for="a3">Chest Pain</label>
+          <span class="helper-text">Enter your Constructive Pericarditis here (1-Typical Angina,2-atypical angina,3-non anginal pain,4-asymptomatic).</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.trestbps }}
+          <label for="a4">Trestbps</label>
+          <span class="helper-text">Enter your Resting Blood Pressure here, usually given by a numerical value with "mm/Hg" metric.</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.chol }}
+          <label for="a5">Cholesterol</label>
+          <span class="helper-text">Enter your Cholesterol here, usually given by a numerical value with "mm/dl" metric.</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.fbs }}
+          <label for="a6">Fasting Blood Sugar</label>
+          <span class="helper-text">Enter your Fasting Blood Sugar here(1-True,0-False).</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.restcg }}
+          <label for="a7">Restcg</label>
+          <span class="helper-text">Enter your Resting Electrocardiographic Result here(0-normal,1-having ST-T,2-hypertrophy).</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.thalach }}
+          <label for="a8">Thalach</label>
+          <span class="helper-text">Enter your Maximum Heart Rate Achieved here.</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.exang }}
+          <label for="a9">Exang</label>
+          <span class="helper-text">Enter your Exercise Induced Angina here,it is the pain in the chest that comes on with exercise, stress, or other things that make the heart work harder.(1-Yes,0-No).</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.oldpeak }}
+          <label for="a10">Oldpeak</label>
+          <span class="helper-text">Enter your Exercise Relative to Rest here.</span>
+        </div>
+      </div>
+
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.slope }}
+          <label for="a11">Slope</label>
+          <span class="helper-text">Enter your Segment/Heart Rate here(1-upsloping,2-flat,3-downsloping).</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.ca }}
+          <label for="a12">Ca</label>
+          <span class="helper-text">Enter your CA which is the number of blood vessels coloured by flourosopy here(0-3).</span>
+        </div>
+      </div>
+
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix">directions</i>
+          {{ form.thal }}
+          <label for="a13">Thalassemia</label>
+          <span class="helper-text">Enter your Thalassemia which is a blood disorder involving lower-than-normal amounts of an oxygen-carrying protein here(3-Normal,6-Fixed Defect,7- Reversible Defect).</span>
+        </div>
+      </div>
+      
+      
+      
+      {% csrf_token %}
+      <button class=" black btn waves-effect waves-light" type="submit" name="action"  > Test Now
+        <i class="material-icons right">send</i>
+      </button>
+
+
+    </form>
+      
+        
+  </div>
+
+  <br>
+
+  {% endblock %}
